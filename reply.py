@@ -2,6 +2,7 @@ from discord.ext import commands
 from datetime import date
 from secrets import choice
 from requests import post
+import os
 
 def customrandom(amount, low, high):
     global currentdate, keynum
@@ -633,7 +634,7 @@ Use "xN" notation right after the command (e. g. "/d x6 4d6d1") to do multiple i
 
 Good luck!"""
 BOT_PREFIX = '?'
-TOKEN = open('token.txt').readlines()[0].strip()
+TOKEN = os.environ(['API_TOKEN'])
 
 bot = commands.Bot(command_prefix = BOT_PREFIX)
 
