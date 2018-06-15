@@ -634,7 +634,7 @@ Use "xN" notation right after the command (e. g. "/d x6 4d6d1") to do multiple i
 
 Good luck!"""
 BOT_PREFIX = '?'
-TOKEN = os.environ(['API_TOKEN'])
+TOKEN = os.getenv('API_TOKEN', 'oops_no_token')
 
 bot = commands.Bot(command_prefix = BOT_PREFIX)
 
